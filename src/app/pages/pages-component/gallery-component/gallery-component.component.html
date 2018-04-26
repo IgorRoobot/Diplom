@@ -1,0 +1,16 @@
+<div class="pdp__container">
+  <p class="sub__title">All Mushrooms!</p>
+  <div class="collection__items">
+    <div class="collection__item" *ngFor="let mushroom of mushrooms">
+      <div class="container">
+          <img src="../../../../../assets/images/mainImg.png" alt="">
+          <div class="padding">
+            <p class="name">{{ mushroom.name }}</p>
+            <p>{{ mushroom.desc }}</p>
+            <button [routerLink]="['/mushroomdetails', mushroom.id]"><a [routerLink]="['/mushroomdetails', mushroom.id]">More info!</a></button>
+          </div>  
+        </div>
+    </div>
+  </div> 
+  <app-spiner *ngIf="showSpinner"></app-spiner>
+</div>

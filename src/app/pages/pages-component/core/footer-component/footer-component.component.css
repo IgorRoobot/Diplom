@@ -1,0 +1,74 @@
+#footer {
+    width: 100%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, rgba(107,77,168,0.85) 0%, rgba(73,119,194,0.85) 100%);
+}
+#footer .container {
+    width: 72%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 150px 0 65px 0;
+}
+#footer .container form {
+    display: flex;
+    width: 45%;
+    flex-direction: column;
+    align-items: center;
+}
+#footer .container form input[type="text"] {
+    width: 50%;
+    height: 35px;
+    padding: 5px 10px;
+    font-size: 18px;
+}
+#footer .container form input[type="text"]:first-child {
+    margin-right: 50px;
+}
+#footer .container form div {
+    margin: 0 0 20px 0;
+    display: flex;
+    width: 100%;
+    flex-wrap: nowrap;
+}
+#footer .container form input[type="submit"] {
+    width: 45%;
+    height: 40px;
+    padding: 5px 10px;
+    border:none;
+    background: rgba(23,78, 223,.3);
+    transition: .6s all;
+    cursor: pointer;
+    font-size: 16px;
+}
+#footer .container form input[type="submit"]:hover {
+    background: rgba(232,228, 213,.5);
+}
+#footer .container form textarea {
+    width: 100%;
+    margin: 0 0 20px 0;
+}
+#footer .social__items {
+    width: 45%;
+    margin: 40px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+#footer .social__items .social__item {
+    cursor: pointer;
+}
+#footer .coopiright {
+    height: 80px;
+    width: 100%;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#footer .coopiright p {
+    color: white;
+    font-size: 14px;
+}

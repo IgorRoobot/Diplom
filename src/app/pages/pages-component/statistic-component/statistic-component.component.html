@@ -1,0 +1,18 @@
+<div class="pdp__container">
+    <div #containerPieChart id="pie__svg"></div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <td *ngIf="!showSpinner">Label</td>
+                <td *ngIf="!showSpinner">Value</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let pieData of sData">
+                <td [innerHTML]="pieData.label"></td>
+                <td [innerHTML]="pieData.value"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<app-spiner *ngIf="showSpinner"></app-spiner>
