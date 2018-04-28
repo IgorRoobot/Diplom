@@ -1,12 +1,16 @@
 #header {
     width: 100%;
-    height: 700px;
+    height: 100vh;
 }
 .main__image {
-    width: 100%;
-    height: 100%;
+    background: url('../../../../../assets/images/mush_cover.jpeg') no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+    background-size: cover;
     position: relative;
-    background-size:cover!important;
+    height: 100vh;
+    overflow: hidden;
 }
 .main__image nav {
     position: absolute;
@@ -15,39 +19,91 @@
     bottom: 0;
     width: 100%;
     height: 60px;
-    background: red;
+    background: white;
 }
 .main__image nav ul {
     display: flex;
-    width: 91.5%;
+    width: 75.5%;
     align-items: center;
     justify-content: space-around;
     margin: 0 auto;
 }
 #header .inner__text {
-    padding: 250px;
-    text-align: center;
+    padding: 250px 0;
 }
 #header .inner__text h1 {
     font-size: 32px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-weight: bold;
+    margin-bottom: 30px;
     line-height: 40px;
 }
 #header .inner__text p {
-    width: 65%;
-    margin: 0 auto;
+    width: 55%;
     line-height: 30px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size:16px;
 }
 #header nav a {
-    color:white;
+    color: black;
     font-weight: bold;
     text-decoration: none;
-    transition: .4s all;
+    transition: .2s all;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 #header nav a:hover {
-    color: lightblue;
+    text-shadow: 10px 10px 30px black;
 }
+.cloud {
+    background-image: url('http://cmagruder.me/content/home/clouds.png'); 
+    background-position: 0px 0px;
+      background-repeat: repeat-x;
+    height: 100%;
+    opacity: 0.8;
+  }
+  
+  @keyframes cloud {
+     100% { background-position: -1900px; }
+  }
+  
+  
+  .cloud {
+  animation: cloud 100s linear infinite;
+  }
+  
+  .container {
+    color: white;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 100%;
+    width: 72%;
+    margin: 0 auto;
+  }
+  .inner__text button {
+      width: 250px;
+      height: 50px;
+      cursor: pointer;
+      margin-top: 80px;
+      background: white;
+      border: none;
+      transition: .3s all;
+      color:black;
+      position: relative;
+      font-size: 20px;
+  }
+  .inner__text button:hover {
+    transform: translateY(-5px);
+  }
+  .inner__text button:active {
+    transform: translateY(0);
+  }
+  .inner__text button:before {
+      width: 50px;
+      height: 100%;
+      content: '';
+      background:#969696;
+      position: absolute;
+      right: 0;
+      top: 0;
+  }

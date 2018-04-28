@@ -6,14 +6,26 @@
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, earum cum? Voluptas, ullam molestias ab exercitationem fugiat excepturi iure possimus nisi similique corrupti nulla, consectetur, sint dolor deleniti perferendis autem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi exercitationem eaque, asperiores vitae temporibus corrupti quo alias, deleniti debitis fuga, quas tenetur sed quisquam dolore unde velit rem eveniet quos.</p>
     </div>
   </section>
-  <section class="how_to_use">
+  <section class="how_to_use" name="inctruction">
     <p class="sub__title">How to use</p>
     <div class="instruction">
       <ul>
-        <li>Upload the image with mashrooms</li>
-        <li>Wait 'till upload</li>
-        <li>Press the button!</li>
-        <li>See the result of above steps</li>
+        <li>
+          Upload the image with mashrooms
+        </li>
+        <img src="../../../../assets/images/Screenshot_3.png" alt="">
+        <li>
+          Wait 'till upload
+        </li>
+        <img src="../../../../assets/images/Screenshot_4.png" alt="">
+        <li>
+          Press the button!
+        </li>
+        <img src="../../../../assets/images/Screenshot_5.png" alt="">
+        <li>
+          See the result of above steps
+          <img src="" alt="">
+        </li>
       </ul>
     </div>
   </section>
@@ -26,6 +38,7 @@
               <button type="button" class="btn btn-sm btn-default" (click)="clearFile()">Clear Field</button>
             </div>
             <button type="submit" [disabled]="form.invalid || loading" class="btn btn-success">Submit <i class="fa fa-spinner fa-spin fa-fw" *ngIf="loading"></i></button>
+            <div class="notification">*Proggresing data may take some time!</div>
         </form>
         <div class="image" [ngStyle]="{'background-image': 'url(' + url + ')'}">
           <div *ngIf="!url">
@@ -34,11 +47,11 @@
         </div>
       </div>
       <div class="post__data" *ngIf="postData">
-          <ul>
-            <li>Name: {{ postData[0].name }}</li>
-            <li>Score: {{ postData[0].score }}</li>
-            <li>Description: {{ postData[0].description }}</li>
+          <ul *ngFor="let data of postData">
+            <li>Name: {{ data.name }}</li>
+            <li>Score: {{ data.score }}</li>
+            <li>Description: {{ data.description }}</li>
           </ul>
-        </div>
+      </div>
   </section>
 </div>

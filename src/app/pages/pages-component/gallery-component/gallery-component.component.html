@@ -1,13 +1,12 @@
 <div class="pdp__container">
   <p class="sub__title">All Mushrooms!</p>
   <div class="collection__items">
-    <div class="collection__item" *ngFor="let mushroom of mushrooms">
+    <div class="collection__item" *ngFor="let data of _galleryData">
       <div class="container">
-          <img src="../../../../../assets/images/mainImg.png" alt="">
+          <div class="img" [ngStyle]="{'background-image': 'url(' + data.data.url + ')'}"></div>
           <div class="padding">
-            <p class="name">{{ mushroom.name }}</p>
-            <p>{{ mushroom.desc }}</p>
-            <button [routerLink]="['/mushroomdetails', mushroom.id]"><a [routerLink]="['/mushroomdetails', mushroom.id]">More info!</a></button>
+            <p class="name">{{ data.data.title }}</p>
+            <button [routerLink]="['/mushroomdetails', data.data.id]"><a [routerLink]="['/mushroomdetails', data.data.id]">More info!</a></button>
           </div>  
         </div>
     </div>

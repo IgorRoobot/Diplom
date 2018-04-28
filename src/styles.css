@@ -46,6 +46,7 @@ table {
     width: 60%;
 	margin: 0 auto;
 	padding-bottom: 32px;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 .pdp__container .sub__title {
 	font-size:32px;

@@ -26,6 +26,7 @@ import { StatisticService } from './pages/pages-component/statistic-component/st
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { ProdDetailsComponent } from './pages/pages-component/prod-details/prod-details.component';
 import { SpinerComponent } from './pages/pages-component/core/spiner/spiner.component';
+import { httpService } from './pages/pages-component/core/http.service';
 
 @NgModule({
   declarations: [
@@ -50,9 +51,9 @@ import { SpinerComponent } from './pages/pages-component/core/spiner/spiner.comp
     HttpClientModule,
     ReactiveFormsModule,
     AngularFontAwesomeModule,
-    HttpModule
+    HttpModule,
   ],
-  providers: [DbListService, StatisticService],
+  providers: [DbListService, StatisticService, httpService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

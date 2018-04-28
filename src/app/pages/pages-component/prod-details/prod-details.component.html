@@ -1,8 +1,9 @@
-<div class="pdp__container">
-  <p class="sub__title"></p>
-  <p>
-    {{formData.name}}
-    prod-details works!
-  </p>
+<div class="pdp__container" *ngIf="formData">
+  <p class="sub__title">Информашия про гриб "{{ formData.data.title }}"</p>
+  <div class="detail__container">
+    <img [src]="formData.data.url" class="detail__img" alt="">
+    <p class="description">{{ formData.data.description }}</p>
+  </div>
   <app-spiner *ngIf="showSpinner"></app-spiner>
+  <statistic-component></statistic-component>
 </div>

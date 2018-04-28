@@ -1,0 +1,8 @@
+.detail__img {
+    width: 45%;
+    height: 45%;
+    margin-right: 30px;
+}
+.detail__container {
+    display: flex;
+}

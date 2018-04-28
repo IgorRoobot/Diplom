@@ -72,3 +72,33 @@
     color: white;
     font-size: 14px;
 }
+.cloud {
+    background-image: url('http://cmagruder.me/content/home/clouds.png'); 
+    background-position: 0px 0px;
+      background-repeat: repeat-x;
+    height: 100%;
+    opacity: 0.8;
+  }
+  
+  @keyframes cloud {
+     100% { background-position: -1900px; }
+  }
+
+  .cloud {
+     animation: cloud 100s linear infinite;
+  }
+  
+  .main__image {
+    background: url('../../../../../assets/images/mush_cover.jpeg') no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+    background-size: cover;
+    position: relative;
+    background-position: 0 26%;
+    overflow: hidden;
+}
+.social__items img {
+    width: 40px;
+    height: 40px;
+}

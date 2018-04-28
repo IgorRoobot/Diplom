@@ -12,17 +12,12 @@ export class DbListService {
   private mushroomsCollection: AngularFirestoreCollection<galleryModel>;
   user: Observable<firebase.User>;
   items: Observable<any[]>;
-  // mushrooms: any;
-  // shroomColl = [];
   myDb: any;
 
   constructor(public afAuth: AngularFireAuth, db: AngularFirestore) {
       this.afAuth.auth.signInAnonymously();
       this.user = this.afAuth.authState;
       this.items = db.collection('items').valueChanges();
-      // this.mushroomsCollection = db.collection<galleryModel>('mushrooms', data => data.orderBy('name'));
-      // this.mushrooms = this.mushroomsCollection.valueChanges().subscribe(items=> this.shroomColl = items);
-      // console.log(this.shroomColl);
       this.myDb = db;
   }
 

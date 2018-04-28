@@ -13,6 +13,9 @@ export class HomeComponentComponent implements OnInit {
   loading: boolean = false;
   url: string;
   postData = [];
+  startedClass = false;
+  completedClass = false;
+  preventAbuse = false;
   
   @ViewChild('fileInput') fileInput: ElementRef;
 
@@ -75,7 +78,6 @@ export class HomeComponentComponent implements OnInit {
       reader.readAsDataURL(event.target.files[0]);
     }
   }
-
 
   ngOnInit(){
     
