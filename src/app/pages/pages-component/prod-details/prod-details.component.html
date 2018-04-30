@@ -5,5 +5,27 @@
     <p class="description">{{ formData.data.description }}</p>
   </div>
   <app-spiner *ngIf="showSpinner"></app-spiner>
-  <statistic-component></statistic-component>
+  <p class="sub__title">Статистика нахождения грибов на разных зонах Украины</p>
+  <table class="table table-striped responstable">
+      <thead>
+          <tr>
+              <th>Color</th>
+              <th *ngIf="!showSpinner">Label</th>
+              <th *ngIf="!showSpinner">Value</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let pieData of sData; let i=index">
+              <td><div class="color" [ngStyle]="{'background-color': colors[i]}"></div></td>
+              <td [innerHTML]="pieData.label"></td>
+              <td [innerHTML]="pieData.value"></td>
+          </tr>
+      </tbody>
+  </table>  
 </div>
+<div class="pdp__container">
+  <p class="sub__title">График нахождения грибов на разных зонах Украины</p>
+</div>
+<div #detailPieChart id="pie__svg"></div>
+
+

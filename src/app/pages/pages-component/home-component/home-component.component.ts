@@ -2,6 +2,7 @@ import {Component, ElementRef, ViewChild, OnInit, ChangeDetectorRef} from '@angu
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import { HttpClient } from '@angular/common/http';
 import { Http, Response, RequestOptions, Headers, HttpModule } from '@angular/http';
+import { httpService } from '../core/http.service';
 
 @Component({
   selector: 'app-home-component',
@@ -16,10 +17,11 @@ export class HomeComponentComponent implements OnInit {
   startedClass = false;
   completedClass = false;
   preventAbuse = false;
+  flag = true;
   
   @ViewChild('fileInput') fileInput: ElementRef;
 
-  constructor(private fb: FormBuilder, private http: Http, private changeDetectorRef: ChangeDetectorRef) {
+  constructor(private fb: FormBuilder, private http: Http, private changeDetectorRef: ChangeDetectorRef, private httpService: httpService) {
     this.createForm();
   }
 
@@ -60,6 +62,7 @@ export class HomeComponentComponent implements OnInit {
 
   saveData(data) {
     const res = data.json();
+    this.flag = false;
     return this.postData.push(res);
   }
 

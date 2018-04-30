@@ -12,6 +12,9 @@
     width: 100%;
     height: 100%;
 }
+.instruction ul li img {
+    width: 100%;
+}
 .instruction ul li{
     font-size:1.5em;
     text-shadow: 8px 8px 15px black;
@@ -77,9 +80,9 @@ input[type=file] {
     width: 180px;
     height: 34px;
     overflow: hidden;
-  }
+}
   
-  input[type=file]:before {
+input[type=file]:before {
     width: 158px;
     height: 32px;
     font-size: 16px;
@@ -91,13 +94,67 @@ input[type=file] {
     padding: 0 10px;
     text-align: center;
     font-family: Helvetica, Arial, sans-serif;
-  }
-  
-  input[type=file]::-webkit-file-upload-button {
+}
+
+input[type=file]::-webkit-file-upload-button {
     visibility: hidden;
-  }
-  .notification {
-      color: red;
-      font-size: .87em;
-      padding-right: 30px;
-  }
+}
+.notification {
+    color: red;
+    font-size: .87em;
+    padding-right: 30px;
+}
+.post__data {
+    padding: 0 20px;
+}
+.post__data li:contains(Score) {
+    font-size: 16px;
+    font-weight: bold;
+}
+.post__data li button {
+    width: 250px;
+    height: 50px;
+    cursor: pointer;
+    margin: 10px;
+    background: white;
+    border: none;
+    transition: .3s all;
+    color:black;
+    position: relative;
+    font-size: 20px;
+}
+.post__data li button:hover {
+  transform: translateY(-5px);
+}
+.post__data li button:active {
+  transform: translateY(0);
+}
+.post__data li button:before {
+    width: 50px;
+    height: 100%;
+    content: '';
+    background:#969696;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.pre__results {
+    width: 100%;
+    height: 200px;
+    background: lightgray;
+}
+.pre__results>.reload {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px 0;
+}
+.pre__results>.reload p {
+    font-weight: bold;
+    font-size: 24px;    
+}
+.pre__results li p {
+    font-weight: bold;
+    font-size: 18px;  
+    margin:  0 0 0 5px;
+}

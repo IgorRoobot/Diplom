@@ -4,6 +4,7 @@ import { StatisticService } from './statistic.service';
 import { database } from 'firebase/app';
 import { Observable } from 'rxjs/Observable';
 import * as D3 from "d3";
+import { httpService } from '../core/http.service';
 
 @Component({
   selector: 'statistic-component',
@@ -25,13 +26,15 @@ export class StatisticComponentComponent implements AfterViewInit {
   newValue: number;
   showSpinner: boolean = true;
 
-  constructor (private statisticService: StatisticService) { }
+  constructor (private statisticService: StatisticService, private httpService: httpService) { }
 
   ngAfterViewInit() {
       this.htmlElement = this.element.nativeElement;
       this.host = D3.select(this.htmlElement);
       this.statisticService.getData().subscribe(data => {
+          console.log(data)
         this.pieData = data;
+        console.log(this.pieData);
         this.setup();
         this.buildSVG();
         this.buildPie();

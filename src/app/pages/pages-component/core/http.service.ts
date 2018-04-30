@@ -9,7 +9,7 @@ import "rxjs/Rx";
 @Injectable()
 export class httpService {
     apiRoot: string = "http://my-dyplom.ddns.net";
-    url = `${this.apiRoot}/mock/`;
+    url = `${this.apiRoot}/mushrooms/`;
 
     constructor (private http: Http) { }
 

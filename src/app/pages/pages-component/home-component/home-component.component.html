@@ -46,12 +46,19 @@
           </div>
         </div>
       </div>
-      <div class="post__data" *ngIf="postData">
-          <ul *ngFor="let data of postData">
-            <li>Name: {{ data.name }}</li>
-            <li>Score: {{ data.score }}</li>
-            <li>Description: {{ data.description }}</li>
-          </ul>
+      <div class="result__field">
+        <p class="sub__title">Results</p>
+        <div class="pre__results">
+          <div class="reload">
+           <p>There you will see your results</p>
+          </div>
+          <div class="post__data" *ngIf="postData">
+              <ul *ngFor="let data of postData">
+                <li><button><a [routerLink]="['/mushroomdetails', data.id]">Name: {{ data.name }}</a></button></li>
+                <li><p>Score: {{ data.score }}</p></li>
+              </ul>
+          </div>
+        </div>
       </div>
   </section>
 </div>
