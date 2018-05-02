@@ -43,12 +43,12 @@ export class HomeComponentComponent implements OnInit {
     input.append('file', this.form.get('file').value);
     return input;
   }
-
+  // http://my-dyplom.ddns.net/
   onSubmit() {
     if(this.url) {
       const formModel = this.prepareSave();
       this.loading = true;
-      this.http.post('http://my-dyplom.ddns.net/', formModel).subscribe( data => {
+      this.http.post('http://195.201.129.41:8001/', formModel).subscribe( data => {
         this.saveData(data);
       });
       setTimeout(() => {
