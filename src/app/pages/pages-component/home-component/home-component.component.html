@@ -53,10 +53,15 @@
            <p>There you will see your results</p>
           </div>
           <div class="post__data" *ngIf="postData">
-              <ul *ngFor="let data of postData">
-                <li><button><a [routerLink]="['/mushroomdetails', data.id]">Name: {{ data.name }}</a></button></li>
-                <li><p>Score: {{ data.score }}</p></li>
+              <ul *ngIf="hideImg">
+                <li>Please select another image, this image is not trained of bad queality!</li>
               </ul>
+              <div *ngIf="!hideImg">
+                <ul *ngFor="let data of postData">
+                  <li><button><a [routerLink]="['/mushroomdetails', data.id]">Name: {{ data.name }}</a></button></li>
+                  <li><p>Score: {{ data.score }}</p></li>
+                </ul>
+              </div>
           </div>
         </div>
       </div>

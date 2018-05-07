@@ -18,6 +18,7 @@ export class HomeComponentComponent implements OnInit {
   completedClass = false;
   preventAbuse = false;
   flag = true;
+  hideImg = false;
   
   @ViewChild('fileInput') fileInput: ElementRef;
 
@@ -50,6 +51,9 @@ export class HomeComponentComponent implements OnInit {
       this.loading = true;
       this.http.post('http://195.201.129.41:8001/', formModel).subscribe( data => {
         this.saveData(data);
+        if(this.postData[0].data) {
+          this.hideImg = true;
+        }
       });
       setTimeout(() => {
         alert ("Send!")
