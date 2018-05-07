@@ -3,7 +3,7 @@
     height: 100vh;
 }
 .main__image {
-    background: url('../../../../../assets/images/mush_cover.jpeg') no-repeat center center fixed;
+    background: url('../../../../../assets/images/pink_begonia_flowers.jpg') no-repeat center center fixed;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
@@ -29,6 +29,9 @@
     margin: 0 auto;
 }
 #header .inner__text {
+    background: rgba(0,0,0,.5);
+    padding: 40px;
+    border: 10px solid rgba(255,255,255,.8);
 }
 #header .inner__text h1 {
     font-size: 32px;
@@ -38,7 +41,7 @@
     line-height: 40px;
 }
 #header .inner__text p {
-    width: 55%;
+    width: 100%;
     line-height: 30px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size:16px;

@@ -1,11 +1,11 @@
 <div class="pdp__container" *ngIf="formData">
-  <p class="sub__title">Информашия про гриб "{{ formData.data.title }}"</p>
+  <p class="sub__title">Information about flower "{{ formData.data.title }}"</p>
   <div class="detail__container">
     <img [src]="formData.data.url" class="detail__img" alt="">
     <p class="description">{{ formData.data.description }}</p>
   </div>
   <app-spiner *ngIf="showSpinner"></app-spiner>
-  <p class="sub__title">Статистика нахождения грибов на разных зонах Украины</p>
+  <p class="sub__title">Statistics of finding flowers in different zones of Ukraine</p>
   <table class="table table-striped responstable">
       <thead>
           <tr>
@@ -24,7 +24,7 @@
   </table>  
 </div>
 <div class="pdp__container">
-  <p class="sub__title">График нахождения грибов на разных зонах Украины</p>
+  <p class="sub__title">The schedule of flowers in different zones of Ukraine</p>
 </div>
 <div #detailPieChart id="pie__svg"></div>
 
